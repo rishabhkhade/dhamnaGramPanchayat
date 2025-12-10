@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/your-project-name/index.html"
+      "dest": "/dist/gram-panchayat/index.html"
     }
   ]
 }
