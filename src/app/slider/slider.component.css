@@ -1,0 +1,40 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%; /* Ensure each slide takes full width */
+  height: 100%; /* Set a fixed height for the slides */
+}
+
+.slide img {
+  width: 100%; 
+  height: 100%;
+  object-fit: contain; /* Ensure the image covers the entire slide without distortion */
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.controls button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #555;
+}

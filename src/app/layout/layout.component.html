@@ -1,0 +1,109 @@
+<div class="projcard-container">
+
+    <div class="projcard projcard-blue">
+        <div class="projcard-innerbox">
+            <img class="projcard-img" src="assets/images/layout_images/Sarpanch_Image.jpeg" />
+            <div class="projcard-textbox">
+                <div class="projcard-title">वंदना मारोती थुटूरकर</div>
+                <div class="projcard-subtitle">सरपंच</div>
+                <div class="projcard-bar"></div>
+                <div class="projcard-description">
+                    देव कोणाचं नशीब लिहित नाही. आयुष्यातल्या प्रत्येक पावलावर आपले विचार, आपली वागणूक आणि आपले कर्म हेच आपलं भाग्य ठरवत असतात.
+                </div>
+                <div class="projcard-tagbox">
+                    <!-- <span class="projcard-tag">HTML</span>
+                    <span class="projcard-tag">CSS</span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projcard projcard-red">
+        <div class="projcard-innerbox">
+            <img class="projcard-img" src="assets/images/layout_images/Upasarpanch_Image.jpeg" />
+            <div class="projcard-textbox">
+                <div class="projcard-title">मनोहर अवचित येलेकर</div>
+                <div class="projcard-subtitle">उपसरपंच</div>
+                <div class="projcard-bar"></div>
+                <div class="projcard-description">
+                    माणसाचे विचारच त्याला महान बनवतात आणि त्याला आयुष्यातून उठवायचं काम सुद्धा विचारच करतात.
+                </div>
+                <div class="projcard-tagbox">
+                    <!-- <span class="projcard-tag">PHP</span>
+                    <span class="projcard-tag">SQL</span>
+                    <span class="projcard-tag">Database</span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="projcard projcard-green">
+        <div class="projcard-innerbox">
+            <img class="projcard-img" src="https://picsum.photos/800/600?image=1039" />
+            <div class="projcard-textbox">
+                <div class="projcard-title">And a Third Card</div>
+                <div class="projcard-subtitle">You know what this is by now</div>
+                <div class="projcard-bar"></div>
+                <div class="projcard-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</div>
+                <div class="projcard-tagbox">
+                    <span class="projcard-tag">Excel</span>
+                    <span class="projcard-tag">VBA</span>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="projcard projcard-customcolor" style="--projcard-color: #F5AF41;">
+        <div class="projcard-innerbox">
+            <img class="projcard-img" src="https://picsum.photos/800/600?image=943" />
+            <div class="projcard-textbox">
+                <div class="projcard-title">Last Card</div>
+                <div class="projcard-subtitle">That's the last one. Have a nice day!</div>
+                <div class="projcard-bar"></div>
+                <div class="projcard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                <div class="projcard-tagbox">
+                    <span class="projcard-tag">iOS</span>
+                    <span class="projcard-tag">Android</span>
+                    <span class="projcard-tag">Cordova</span>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</div>
+
+
+
+<div style="position: fixed;z-index: 9999;bottom: 10%;right: 0%;background-color: whitesmoke;" *ngIf="showEnquiry" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <!-- <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div> -->
+            <div class="modal-body">
+                <form>      
+                    <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+                    <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                    <textarea name="text" class="feedback-input" placeholder="Complaint"></textarea>
+                    <input type="submit" value="SUBMIT" (click)="openEnquiryForm()"/>
+                    <p></p>
+                    <input type="submit" value="CLOSE" (click)="openEnquiryForm()"/>
+                </form>
+            </div>
+            <i class="fa fa-question-circle" style="font-size:48px;color:red"></i>
+<!--            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="openEnquiryForm()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="openEnquiryForm()">Save changes</button>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+
+<div class="sticky-button" (click)="downloadPDF()">
+    <img src="assets/images/other/pdf_download.png" alt="Download" class="icon">
+</div>
+<button type="button" class="enquiryButton" (click)="openEnquiryForm()">Complaint</button>

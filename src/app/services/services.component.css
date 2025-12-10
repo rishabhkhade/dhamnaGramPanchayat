@@ -1,0 +1,127 @@
+/* Move any @import statements to the top, if there are any */
+/* @import 'some-file.css'; */
+
+/* Styling for the service head */
+.serviceHead {
+    text-align: center;
+    font-size: 2vw;
+    color: black;
+    margin-top: 4vw;
+    margin-bottom: 1vw;
+}
+
+/* Styling for the grid */
+.grid {
+    display: flex;
+    /* grid-template-columns should not be used with display: flex */
+    /* Use display: grid if you want to use grid-template-columns */
+    /* grid-template-columns: repeat(5, 240px); */
+    grid-gap: 32px; /* grid-gap is now gap in modern CSS */
+    margin: 0 auto;
+    width: calc(100% - 64px);
+    position: relative;
+    z-index: 1;
+}
+
+/* Styling for the card container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Adjust spacing between cards */
+}
+
+/* Styling for individual cards */
+.card {
+    background-color: var(--background-color);
+    box-shadow: 0px var(--card-box-shadow-1-y) var(--card-box-shadow-1-blur) var(--card-box-shadow-1),
+                0px var(--card-box-shadow-2-y) var(--card-box-shadow-2-blur) var(--card-box-shadow-2),
+                0 0 0 1px var(--card-border-color);
+    padding: 56px 16px 16px 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: box-shadow .25s;
+    border: 1px solid lightgray;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    background-color: var(--card-background-color);
+}
+
+.card .icon {
+    z-index: 2;
+    position: relative;
+    display: table;
+    padding: 8px;
+}
+
+.card .icon::after {
+    content: '';
+    position: absolute;
+    inset: 4.5px;
+    border-radius: 50%;
+    background-color: var(--card-icon-background-color);
+    border: 1px solid var(--card-icon-border-color);
+    backdrop-filter: blur(2px);
+    transition: background-color .25s, border-color .25s;
+}
+
+.card .icon svg {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 24px;
+    height: 24px;
+    transform: translateZ(0);
+    color: var(--card-icon-color);
+    transition: color .25s;
+}
+
+.card h4 {
+    z-index: 2;
+    position: relative;
+    margin: 12px 0 4px 0;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 2;
+    color: var(--card-label-color);
+}
+
+.card p {
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.card .shine {
+    border-radius: inherit;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.card .shine::before {
+    content: '';
+    width: 150%;
+    padding-bottom: 150%;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 55%;
+    filter: blur(35px);
+    opacity: var(--card-shine-opacity);
+    transform: translateX(-50%);
+    background-image: var(--card-shine-gradient);
+}

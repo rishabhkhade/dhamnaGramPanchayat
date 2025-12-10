@@ -1,0 +1,11 @@
+<div class="slider">
+    <div class="slides" [style.transform]="'translateX(' + slideOffset + '%)'">
+        <div class="slide" *ngFor="let image of images">
+            <img [src]="image.url" [alt]="image.alt">
+        </div>
+    </div>
+    <!-- <div class="controls">
+        <button (click)="prevSlide()">Previous</button>
+        <button (click)="nextSlide()">Next</button>
+    </div> -->
+</div>
