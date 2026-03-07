@@ -5,7 +5,7 @@
   color: #333;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -52,4 +52,29 @@
   right: 0;
   z-index: 1000;
   /* Ensure the header stays above other content */
+}
+
+
+.sticky-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.social-icons{
+ padding-left: 550px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  margin-left: 12px;
+  color: #333;
+  text-decoration: none;
+
+ 
+}
+
+.social-icons a:hover {
+  color: #e1306c;
 }
